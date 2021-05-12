@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../../fonts/Roboto-Light.ttf");
+}
+.groups__img {
+  width: 15%;
+  height: 15%;
+  margin-left: 40%;
+  margin-top: 5%;
+  border-radius: 5%;
+}
+.groups__a {
+  position: absolute;
+  top: 45%;
+  right: 50%;
+}
+.groups__option_def {
+  display: none;
+}
+.groups__search_select {
+  margin-top: 3%;
+  margin-left: 38%;
+}
+.groups__project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 20%;
+}
+.groups__project div {
+  font-family: "Roboto Light";
+  font-size: 70%;
+  border: 0.5px solid black;
+  width: 60%;
+  border-radius: 8px;
+  margin-top: 5%;
+  margin-left: 10%;
+  padding-top: 4%;
+  padding-right: 8%;
+  padding-bottom: 4%;
+  padding-left: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.groups__project_img {
+width: 10%;
+}

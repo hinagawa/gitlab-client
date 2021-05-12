@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto-Light.ttf");
+}
+.header {
+  display: flex;
+  justify-content: start;
+  padding-top: 1%;
+}
+.header__h4 {
+  font-family: "Roboto Light";
+}
+.header__img {
+  border-radius: 50%;
+  width: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
