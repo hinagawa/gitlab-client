@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../../fonts/Roboto-Light.ttf");
+}
+
+.group__avatar img {
+    width: 10%;
+    margin-left: 45%;
+    border-radius: 8px;
+    margin-top: 5%;
+}
+
+.group__avatar p {
+    margin-left: 48%;
+}
+
+.group__inputs {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    margin-right: 40%;
+}
+
+.group__inputs select {
+    margin-left: 1%;
+}

@@ -7,7 +7,7 @@ import groupInfo from "../../queries/group-info";
 
 function Main() {
     const username = localStorage.getItem('username');
-    const {loading, error, data } = useQuery(groupInfo,{
+    const { loading, error, data } = useQuery(groupInfo, {
         variables: {
             username: username,
         }
@@ -21,7 +21,7 @@ function Main() {
             <h3>{data.user.groupCount} Groups</h3>
             <div className="main__groups">
                 <div>
-                   <a href={data.user.groupMemberships.nodes[0].group.fullPath}> <h2>{data.user.groupMemberships.nodes[0].group.fullName}</h2></a>
+                    <a href={data.user.groupMemberships.nodes[0].group.fullPath}> <h2>{data.user.groupMemberships.nodes[0].group.fullName}</h2></a>
                     <a>{data.user.groupMemberships.nodes[0].group.visibility}</a>
                 </div>
                 <div>
