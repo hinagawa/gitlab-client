@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import SignIn from "./sign-in/sign-in";
 import Main from "./main/main";
-import GroupsPage from "./groups-page/groups-page"
+import GroupsPage from "./groups-page/groups-page";
+import GroupPage from "./group-page/group-page";
 
 const Routing = () => {
     return (
@@ -10,6 +11,7 @@ const Routing = () => {
             <Route path="/sign-in" component={SignIn} exact />
             <Route path="/" component={Main} exact />
             <Route path="/groups" component={GroupsPage} exact />
+            <Route path="/hinagawa_test" component={GroupPage} exact />
         </Router>
     )
 }

@@ -25,7 +25,6 @@ class GroupsPage extends React.Component {
                         <h2>Author</h2>
                         <h2>12-02-2021</h2>
                     </div>
-
                     <div>
                         <img className="groups__project_img" src="https://st37.stpulscen.ru/images/product/126/871/177_big.jpg" alt="Project image"></img>
                         <h2>Project 2</h2>

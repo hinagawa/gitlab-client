@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 const group = gql`
-query ($username = String!){
+query ($username: String!){
     user(username:$username) {
       groupCount,
       groupMemberships{
@@ -10,7 +10,8 @@ query ($username = String!){
             avatarUrl,
             description,
             fullName,
-            fullPath
+            fullPath,
+            visibility
           }
         }
       }
