@@ -24,3 +24,30 @@
 .group__inputs select {
     margin-left: 1%;
 }
+
+.group__projects {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Light";
+}
+
+.group__projects {
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Light";
+}
+
+.group__projects a {
+    text-decoration: none;
+    color: black;
+}
+
+.group__projects div {
+    border: 0.5px solid #c5c5c5;
+    padding: 1%;
+    margin-bottom: 3%;
+    border-radius: 5px;
+}

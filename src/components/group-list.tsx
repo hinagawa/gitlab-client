@@ -14,16 +14,15 @@ function GroupList() {
     if (error) return <p>Error: {error.message}</p>
     const arr = data.user.groupMemberships.nodes;
     return (
-        arr.map((obj, key)=> {
-            return(
-            <div id={key} key={key}>
-            <a href={obj.group.fullPath}> <h2>{obj.group.fullName}</h2></a>
-            <a>{obj.group.visibility}</a>
-        </div>
-        )})
-        
+        arr.map((obj, key) => {
+            return (
+                <div id={key} key={key}>
+                    <a href={obj.group.fullPath}> <h2>{obj.group.fullName}</h2></a>
+                    <a>{obj.group.visibility}</a>
+                </div>
+            )
+        })
     )
-
 }
 
 export default GroupList;

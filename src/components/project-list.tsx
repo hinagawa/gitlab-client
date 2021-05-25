@@ -5,7 +5,6 @@ import projectInfo from "../queries/project-info";
 
 function PageList() {
     const fullPath = document.location.pathname.substr(1,);
-    console.log(fullPath);
     const { loading, error, data } = useQuery(projectInfo, {
         variables: {
             fullPath: fullPath,
@@ -21,7 +20,7 @@ function PageList() {
                     {obj.avatarUrl &&
                         <img src={obj.avatarUrl}></img>
                     }
-                    <h1>{obj.name}</h1>
+                    <a href={obj.fullPath}><h2>{obj.name}</h2></a>
                     <p>{obj.createdAt}</p>
                     {obj.archived &&
                         <p>Archived</p>

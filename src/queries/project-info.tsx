@@ -8,9 +8,10 @@ query ($fullPath: ID!) {
     avatarUrl,
     createdAt,
     name,
-    archived
+    archived,
+    fullPath
+     }
     }
-  }
    }
   }
 `

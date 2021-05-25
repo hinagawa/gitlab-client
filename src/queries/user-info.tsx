@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
- 
-const profile =gql`
+
+const profile = gql`
 query ($username: String!) {
     user(username:$username){
         name,
