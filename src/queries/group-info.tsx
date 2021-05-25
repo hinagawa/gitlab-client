@@ -7,6 +7,7 @@ query ($username: String!){
       groupMemberships{
         nodes{
           group{
+            id,
             avatarUrl,
             description,
             fullName,

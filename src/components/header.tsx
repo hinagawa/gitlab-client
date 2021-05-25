@@ -6,7 +6,6 @@ import userInfo from '../queries/user-info';
 
 const Header = () => {
     const username = localStorage.getItem('username');
-    console.log(username);
     const { loading, error, data } = useQuery(userInfo, {
         variables:{
             username: username,

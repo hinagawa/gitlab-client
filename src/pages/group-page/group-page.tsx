@@ -1,7 +1,10 @@
 import React from "react"
 
 import './group-page.css';
+
 import Header from "../../components/header";
+import ProjectList from "../../components/page-list";
+
 class GroupPage extends React.Component {
     username = localStorage.getItem("username");
     render() {
@@ -21,7 +24,7 @@ class GroupPage extends React.Component {
                     </select>
                 </div>
                 <div className="group__projects">
-                    <div className="group__project"></div>
+                    <ProjectList />
                 </div>
             </>
         )

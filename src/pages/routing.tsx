@@ -11,7 +11,7 @@ const Routing = () => {
             <Route path="/sign-in" component={SignIn} exact />
             <Route path="/" component={Main} exact />
             <Route path="/groups" component={GroupsPage} exact />
-            <Route path="/hinagawa_test" component={GroupPage} exact />
+            <Route path="/test_hinagawa" component={GroupPage} exact />
         </Router>
     )
 }
