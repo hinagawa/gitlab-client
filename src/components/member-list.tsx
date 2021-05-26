@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 
 import membersInfo from "../queries/members-info";
+import Loading from "../components/loading";
 
 function MemberList() {
     const fullPath = "cryptsetup/cryptsetup"; // edit
@@ -10,7 +11,7 @@ function MemberList() {
             fullPath: fullPath,
         }
     });
-    if (loading) return <p>Loading...</p>
+    if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     var arr = data.project.projectMembers.nodes;
     return (

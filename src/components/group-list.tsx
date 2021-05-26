@@ -2,6 +2,7 @@ import React from "react";
 
 import { useQuery } from "@apollo/client";
 import groupInfo from "../queries/group-info";
+import Loading from "../components/loading";
 
 function GroupList() {
     const username = localStorage.getItem('username');
@@ -10,21 +11,34 @@ function GroupList() {
             username: username,
         }
     });
-    if (loading) return <p>Loading...</p>
+    if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     const arr = data.user.groupMemberships.nodes;
     return (
         arr.map((obj, key) => {
             return (
-                <div id={key} key={key}>
-                    <a href={obj.group.fullPath}>
-                        <h2>{
-                            obj.group.fullName}
-                        </h2>
-                    </a>
-                    <a>
-                        {obj.group.visibility}
-                    </a>
+                <div id={key} key={key} className="group__div">
+                    { obj.group.avatarUrl &&
+                        <img
+                            src={obj.group.avatarUrl}
+                            alt="group avatar"
+                        ></img>
+                    }
+                    { !obj.group.avatarUrl &&
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Grey_Square.svg/1024px-Grey_Square.svg.png"
+                            alt="group avatar"
+                        >
+                        </img>
+                    }
+                    <div className="group__div_a">
+                        <a href={obj.group.fullPath}>
+                            {obj.group.fullName}
+                        </a>
+                        <a className="group__vis">
+                            {obj.group.visibility}
+                        </a>
+                    </div>
                 </div>
             )
         })

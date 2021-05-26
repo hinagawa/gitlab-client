@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 
 import projectInfo from "../queries/project-info";
+import Loading from "../components/loading";
 
 function PageList() {
     const fullPath = document.location.pathname.substr(1,);
@@ -10,7 +11,7 @@ function PageList() {
             fullPath: fullPath,
         }
     });
-    if (loading) return <p>Loading...</p>
+    if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     const arr = data.group.projects.nodes;
     return (

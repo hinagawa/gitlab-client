@@ -6,6 +6,7 @@ import './group-page.css';
 import GroupInfoId from "../../queries/group-info-by-id";
 import Header from "../../components/header";
 import ProjectList from "../../components/project-list";
+import Loading from "../../components/loading";
 
 function GroupPage() {
     var fullPath = document.location.pathname.substr(1,);
@@ -14,7 +15,7 @@ function GroupPage() {
             fullPath: fullPath
         }
     })
-    if (loading) return <p>Loading...</p>
+    if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     return (
         <>

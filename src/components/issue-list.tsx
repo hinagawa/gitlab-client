@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 
 import issueInfo from "../queries/issue-info";
+import Loading from "../components/loading";
 
 function IssueList() {
     const fullPath = "cryptsetup/cryptsetup";
@@ -10,7 +11,7 @@ function IssueList() {
             fullPath: fullPath,
         }
     });
-    if (loading) return <p>Loading...</p>
+    if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     var arr = data.project.issues.nodes;
     return (

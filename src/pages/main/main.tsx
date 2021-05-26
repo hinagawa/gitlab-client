@@ -5,6 +5,7 @@ import './main.css';
 import Header from '../../components/header';
 import groupInfo from "../../queries/group-info";
 import GroupList from "../../components/group-list";
+import Loading from "../../components/loading";
 
 function Main() {
     const username = localStorage.getItem('username');
@@ -13,7 +14,7 @@ function Main() {
             username: username,
         }
     });
-    if (loading) return <p>Loading...</p>
+    if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     return (
         <div>
