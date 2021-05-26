@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Roboto Light";
+    src: url("../../fonts/Roboto-Light.ttf");
+}
+
+.sign__button {
+    font-family: "Roboto Light";
+    background-color: green;
+    color: white;
+    height: 50%;
+    font-size: 2em;
+    border-radius: 5px;
+    margin-left: 8%;
+    padding: 1%;
+}
+
+.sign__text {
+    font-family: "Roboto Light";
+    font-size: 4em;
+}
+
+.sign__form {
+    margin-left: 25%;
+    margin-top: 3%;
+    height: 40%;
+    padding: 10%;
+}
