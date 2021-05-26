@@ -17,8 +17,14 @@ function GroupList() {
         arr.map((obj, key) => {
             return (
                 <div id={key} key={key}>
-                    <a href={obj.group.fullPath}> <h2>{obj.group.fullName}</h2></a>
-                    <a>{obj.group.visibility}</a>
+                    <a href={obj.group.fullPath}>
+                        <h2>{
+                            obj.group.fullName}
+                        </h2>
+                    </a>
+                    <a>
+                        {obj.group.visibility}
+                    </a>
                 </div>
             )
         })

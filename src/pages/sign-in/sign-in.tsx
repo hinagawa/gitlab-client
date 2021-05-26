@@ -40,7 +40,10 @@ class SignIn extends React.Component {
     return (
       <div className="sign__form">
         <h1 className="sign__text">GitLab Client</h1>
-        <button onClick={this.signInHandler} className="sign__button">
+        <button
+          onClick={this.signInHandler}
+          className="sign__button"
+        >
           Sign in with Github
           </button>
       </div>

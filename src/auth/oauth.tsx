@@ -4,6 +4,7 @@ import 'firebase/auth';
 
 import { firebaseConfig } from '../const/firebase-config';
 import history from '../const/history';
+
 class AuthorizedUser extends React.Component {
     state = { name: '' };
     componentDidMount() {
@@ -12,27 +13,19 @@ class AuthorizedUser extends React.Component {
     }
     auth = async () => {
         try {
-            console.log("ub");
             firebase.initializeApp(firebaseConfig);
             const token = localStorage.getItem("auth-token");
             if (token) {
-
                 const credential = firebase.auth.GithubAuthProvider.credential(token);
-
                 const { user } = await firebase.auth().signInWithCredential(credential);
-                console.log(user);
             }
-            // this.setState({ name: user.displayName });
         } catch (e) {
             console.log(e);
         }
     }
-
     render() {
         return (
-            <div>
-                <h1>Authorized as {this.state.name}!</h1>
-            </div>
+            <></>
         )
     }
 }

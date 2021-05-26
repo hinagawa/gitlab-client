@@ -17,13 +17,19 @@ function PageList() {
         arr.map((obj, key) => {
             return (
                 <div id={key} key={key}>
-                    {obj.avatarUrl &&
-                        <img src={obj.avatarUrl}></img>
+                    {
+                        obj.avatarUrl &&
+                        <img
+                            src={obj.avatarUrl}
+                            alt="project avatar"
+                        ></img>
                     }
-                    <a href={obj.fullPath}><h2>{obj.name}</h2></a>
+                    <a href={obj.fullPath}>
+                        <h2>{obj.name}</h2>
+                    </a>
                     <p>{obj.createdAt}</p>
-                    {obj.archived &&
-                        <p>Archived</p>
+                    {
+                        obj.archived && <p>Archived</p>
                     }
 
                 </div>

@@ -4,8 +4,7 @@ import { useQuery } from "@apollo/client";
 import membersInfo from "../queries/members-info";
 
 function MemberList() {
-    const fullPath = document.location.pathname.substr(1,);
-    console.log(fullPath);
+    const fullPath = "cryptsetup/cryptsetup"; // edit
     const { loading, error, data } = useQuery(membersInfo, {
         variables: {
             fullPath: fullPath,
@@ -13,15 +12,17 @@ function MemberList() {
     });
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error: {error.message}</p>
-    console.log(data.project.name);
     var arr = data.project.projectMembers.nodes;
-    console.log(arr);
     return (
         arr.map((obj, key) => {
             return (
-                <div id={key} key={key}>
+                <div id={key} key={key} className="member__div">
                     <p>{obj.user.name}</p>
                     <p>{obj.accessLevel.stringValue}</p>
+                    <img
+                        src={obj.user.avatarUrl}
+                        alt="user avatar"
+                    ></img>
                 </div>
             )
         })
