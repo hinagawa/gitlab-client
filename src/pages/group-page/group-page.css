@@ -5,6 +5,7 @@
 
 .group__avatar img {
     width: 10%;
+    height: 15%;
     margin-left: 45%;
     border-radius: 8px;
     margin-top: 5%;
@@ -12,6 +13,7 @@
 
 .group__avatar p {
     margin-left: 48%;
+    font-size: 1.5em;
 }
 
 .group__inputs {
@@ -45,9 +47,16 @@
     color: black;
 }
 
+.group__projects img {
+    width: 10%;
+}
+
 .group__projects div {
     border: 0.5px solid #c5c5c5;
-    padding: 1%;
     margin-bottom: 3%;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    justify-content: space-around;
 }

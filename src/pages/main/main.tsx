@@ -19,6 +19,7 @@ function Main() {
         <div>
             <Header />
             <h3>{data.user.groupCount} Groups</h3>
+            <hr></hr>
             <div className="main__groups">
                 <GroupList />
             </div>

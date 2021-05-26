@@ -16,8 +16,7 @@ const Header = () => {
     return (
         <div className="header">
             <img className="header__img" src={data.user.avatarUrl} alt='Avatar'></img>
-            <h4 className="header__h4">{data.user.name}</h4>
-
+           <h4 className="header__h4">{data.user.name}</h4>
         </div>
     )
 }

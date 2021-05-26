@@ -3,6 +3,11 @@
     src: url("../fonts/Roboto-Light.ttf");
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
 .header {
     display: flex;
     justify-content: start;
@@ -10,12 +15,14 @@
 }
 
 .header__h4 {
-    font-family: "Roboto Light";
+    font-family: "Roboto";
+    font-weight: 100px;
+    padding-top: 1em;
 }
 
 .header__img {
     border-radius: 50%;
-    width: 5%;
+    size: 3%;
     margin-left: 1%;
     margin-right: 1%;
 }
