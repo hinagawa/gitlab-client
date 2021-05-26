@@ -29,7 +29,14 @@ class SignIn extends React.Component {
               localStorage.setItem("auth-token", token);
               localStorage.setItem("username", username);
             }
-            history.push("/profile");
+            if (localStorage.getItem("auth-token")) {
+              history.push("/");
+              window.location.reload();
+            }
+            else {
+              history.push("/sign-in");
+              window.location.reload();
+            }
           }
         });
     } catch (e) {

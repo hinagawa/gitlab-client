@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 
 import projectInfo from "../queries/project-info";
-import Loading from "../components/loading";
+import Loading from "../components/loading/loading";
 
 function PageList() {
     const fullPath = document.location.pathname.substr(1,);
@@ -17,7 +17,7 @@ function PageList() {
     return (
         arr.map((obj, key) => {
             return (
-                <div id={key} key={key}>
+                <div id={key} key={key} className="project__div">
                     {
                         obj.avatarUrl &&
                         <img
@@ -25,14 +25,19 @@ function PageList() {
                             alt="project avatar"
                         ></img>
                     }
-                    <a href={obj.fullPath}>
-                        <h2>{obj.name}</h2>
-                    </a>
-                    <p>{obj.createdAt}</p>
-                    {
-                        obj.archived && <p>Archived</p>
+                    { !obj.avatarUrl &&
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Grey_Square.svg/1024px-Grey_Square.svg.png"
+                            alt="project avatar"
+                        >
+                        </img>
                     }
-
+                    <div className="project__a">
+                    <a href={obj.fullPath}>
+                        <p>{obj.name}</p>
+                    </a>
+                    <p>{obj.createdAt.substr(0,10)}</p>
+                    </div>
                 </div>
             )
         })

@@ -2,10 +2,10 @@ import { useQuery } from '@apollo/client';
 
 import './main.css';
 
-import Header from '../../components/header';
+import Header from "../../components/header/header";
 import groupInfo from "../../queries/group-info";
 import GroupList from "../../components/group-list";
-import Loading from "../../components/loading";
+import Loading from "../../components/loading/loading";
 
 function Main() {
     const username = localStorage.getItem('username');

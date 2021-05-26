@@ -3,8 +3,9 @@ import { useQuery } from '@apollo/client';
 
 import './header.css';
 
-import userInfo from '../queries/user-info';
-import Loading from "../components/loading";
+import userInfo from '../../queries/user-info';
+import Loading from "../loading/loading";
+import history from "../../const/history";
 
 const Header = () => {
     const username = localStorage.getItem('username');
@@ -13,6 +14,11 @@ const Header = () => {
             username: username,
         },
     });
+    function quit() {
+        localStorage.clear();
+        history.push('/sign-in');
+        window.location.reload();
+    }
     if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
     return (
@@ -28,7 +34,7 @@ const Header = () => {
                     {data.user.name}
                 </h4>
             </a>
-
+            <button onClick={quit}>Quit</button>
         </div>
     )
 }

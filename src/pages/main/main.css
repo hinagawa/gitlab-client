@@ -6,8 +6,8 @@
 .main__groups {
     display: flex;
     flex-direction: column;
-    width: 240%;
-    margin-left: 10%;
+    width: 200%;
+    margin-left: 16%;
 }
 
 .group__div {

@@ -8,7 +8,6 @@ query ($fullPath: ID!) {
     avatarUrl,
     createdAt,
     name,
-    archived,
     fullPath
      }
     }

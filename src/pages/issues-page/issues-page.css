@@ -1,12 +1,12 @@
 .issue__div {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     border: 0.5px solid gray;
     border-radius: 5px;
     padding-left: 4%;
     padding-right: 4%;
-    width: 100%;
+    width: 180%;
     margin-top: 3%;
 }
 
@@ -16,5 +16,13 @@
 }
 
 .issue__list {
-    margin-right: 40%;
+    margin-right: 50%;
+}
+
+.closed__p {
+    color: green;
+}
+
+.open__p {
+    color: red;
 }

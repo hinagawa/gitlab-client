@@ -4,7 +4,7 @@ import "./members-page.css";
 
 import MemberList from "../../components/member-list";
 import Sidebar from "../../components/sidebar/sidebar";
-import Header from "../../components/header";
+import Header from "../../components/header/header";
 
 function MembersPage() {
     return (

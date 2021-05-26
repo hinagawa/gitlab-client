@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Roboto Light";
+    src: url("../../fonts//Roboto-Light.ttf");
+}
+
+.pipelines__div {
+    font-family: "Roboto Light";
+    border: 0.5px solid #c5c5c5;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    justify-content: space-evenly;
+    width: 250%;
+    margin-right: 75%;
+}
+
+.pipelines__main {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.pipelines__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 2%;
+}
+
+.pipelines__link {
+    margin-top: 4%;
+}
+
+.pipelines__active {
+    font-weight: bolder;
+    color: orange;
+}
+
+.pipelines__complete {
+    color: green;
+    font-weight: bolder;
+}

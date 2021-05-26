@@ -20,3 +20,11 @@
     justify-content: space-evenly;
     margin-top: 10%;
 }
+
+.member__div img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 5%;
+    margin-right: 5%;
+}

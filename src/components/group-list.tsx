@@ -2,7 +2,7 @@ import React from "react";
 
 import { useQuery } from "@apollo/client";
 import groupInfo from "../queries/group-info";
-import Loading from "../components/loading";
+import Loading from "../components/loading/loading";
 
 function GroupList() {
     const username = localStorage.getItem('username');

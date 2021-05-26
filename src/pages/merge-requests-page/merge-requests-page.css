@@ -1,12 +1,18 @@
+@font-face {
+    font-family: "Roboto Light";
+    src: url("../../fonts//Roboto-Light.ttf");
+}
+
 .merge__div {
+    font-family: "Roboto Light";
     border: 0.5px solid gray;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-left: 4%;
-    padding-right: 4%;
-    width: 60%;
+    padding-right: 30%;
+    width: 150%;
     margin-top: 3%;
 }
 
@@ -16,6 +22,15 @@
 }
 
 .merge__list {
-    padding-left: 10%;
-    margin-top: 3%;
+    padding-right: 50%;
+    margin-top: 1%;
+}
+
+.div__title {
+    font-family: "Roboto Light";
+    color: green;
+    font-weight: bolder;
+    display: flex;
+    width: 200%;
+    justify-content: space-evenly;
 }

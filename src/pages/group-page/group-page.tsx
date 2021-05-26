@@ -4,9 +4,9 @@ import { useQuery } from "@apollo/client";
 import './group-page.css';
 
 import GroupInfoId from "../../queries/group-info-by-id";
-import Header from "../../components/header";
+import Header from "../../components/header/header";
 import ProjectList from "../../components/project-list";
-import Loading from "../../components/loading";
+import Loading from "../../components/loading/loading";
 
 function GroupPage() {
     var fullPath = document.location.pathname.substr(1,);

@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 
 import MergeInfo from "../queries/merge-requests-info";
-import Loading from "../components/loading";
+import Loading from "../components/loading/loading";
 
 function MergeList() {
     const fullPath = "cryptsetup/cryptsetup"; //edit
@@ -18,10 +18,10 @@ function MergeList() {
         arr.map((obj, key) => {
             return (
                 <div className="merge__div" key={key} id={key} >
-                    <p>{obj.commitCount}</p>
-                    <p>{obj.createdAt}</p>
-                    <p>{obj.description}</p>
+                    <p>{obj.createdAt.substr(0,10)}</p>
+                    <p>{obj.description.substr(0,20) + "..."}</p>
                     <p>{obj.author.name}</p>
+                    <p>{obj.commitCount}  commits</p>
                 </div>
             )
         })
