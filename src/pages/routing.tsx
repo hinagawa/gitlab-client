@@ -7,6 +7,7 @@ import GroupPage from "./group-page/group-page";
 import MergePage from "./merge-requests-page/merge-requests-page";
 import IssuesPage from "./issues-page/issues-page";
 import MembersPage from "./members-page/members-page";
+import JobsPage from "./jobs-page/jobs-page";
 
 const Routing = () => {
     return (
@@ -18,6 +19,7 @@ const Routing = () => {
             <Route path="/test_hinagawa/new-test-project/merge-requests" component={MergePage} exact />
             <Route path="/test_hinagawa/new-test-project/issue" component={IssuesPage} exact />
             <Route path="/test_hinagawa/new-test-project/members" component={MembersPage} exact />
+            <Route path="/test_hinagawa/new-test-project/jobs" component={JobsPage} exact />
         </Router>
     )
 }

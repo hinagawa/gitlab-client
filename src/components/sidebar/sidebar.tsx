@@ -8,10 +8,14 @@ function Sidebar() {
         <div className="sidebar__div">
             <Link 
                 to="/test_hinagawa/new-test-project">
-                Dashboard
+                Pipelines
             </Link>
             <Link 
-                to="/test_hinagawa/new-test-project/issue">
+                to="/test_hinagawa/new-test-project/jobs">
+                Jobs
+            </Link>
+            <Link 
+                to="/test_hinagawa/new-test-project/issues">
                 Issues
             </Link>
             <Link 

@@ -2,19 +2,19 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
 
-import PipelinesInfo from "../queries/dashboard-info";
+import JobsInfo from "../queries/jobs-info";
 import Loading from "../components/loading/loading";
 
-function PipelinesList() {
+function JobsList() {
     const fullPath = "test_hinagawa/new-test-project"; //edit
-    const { loading, error, data } = useQuery(PipelinesInfo, {
+    const { loading, error, data } = useQuery(JobsInfo, {
         variables: {
             fullPath: fullPath
         }
     })
     if (loading) return <><Loading /></>
     if (error) return <p>Error: {error.message}</p>
-    var arr = data.project.pipelines.nodes;
+    var arr = data.project.jobs.nodes;
     console.log(arr);
 
     return (
@@ -22,18 +22,14 @@ function PipelinesList() {
             return (
                 <div className="pipelines__div" key={key} id={key} >
                     <p >{obj.status}</p>
-
-                    <Link
-                        to={obj.commitPath}
-                        className="pipelines__link"
-                    >
-                        Commit
-                      </Link>
-                    <img src={obj.user.avatarUrl} alt={obj.user.username} title={obj.user.username}></img>
-                </div>
+                    <p>{obj.name}</p>
+                    <p className="jobs__label">{obj.tags}</p>
+                      <p>{obj.refName}</p>  
+                      <p>{obj.stage.name}</p>
+                   </div>
             )
         })
     )
 }
 
-export default PipelinesList;
+export default JobsList;
